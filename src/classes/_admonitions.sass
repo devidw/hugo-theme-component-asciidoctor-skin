@@ -1,0 +1,35 @@
+.admonitionblock
+  border-left-style: solid
+  border-left-width: $body-font-size * 0.5
+  border-radius: $body-font-size * 0.25
+
+  +box-shadow
+
+  @each $name, $color in $admonition-colors
+    &.#{$name}
+      $color-bg: transparentize($color, 0.7)
+
+      border-left-color: $color
+
+      // background: $color-bg)
+      background: linear-gradient(135deg, transparentize($color, 0.9) 0%, $color-bg 100%)
+
+      .title
+        color: $color
+
+  tr
+    display: flex
+    flex-direction: column
+
+    td.icon
+      width: 100%
+      padding-bottom: 0
+      padding-left: 1.125em
+      text-align: left
+
+      // font-style: italic
+
+    td.content
+      padding-top: 0
+      border: none
+      color: $body-txt-color !important

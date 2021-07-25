@@ -1,1 +1,40 @@
+table.tableblock, th.tableblock, td.tableblock
+  border-color: $border-color
+  border-width: $border-width
+
 table
+  $secondary-color: base-lower-shade($block-txt-color, $block-bg-color, 5)
+  background: $block-bg-color
+  color: $block-txt-color
+  border-radius: $border-radius
+
+  +box-shadow
+
+  thead
+    background: $secondary-color
+
+    tr
+      th
+        color: $block-txt-color
+
+        &:first-of-type
+          border-top-left-radius: $border-radius
+
+        &:last-of-type
+          border-top-right-radius: $border-radius
+
+  tbody
+    tr
+      &.even, &.alt, &:nth-of-type(even)
+        background: $secondary-color
+
+      &:last-of-type
+        td
+          &:first-of-type
+            border-bottom-left-radius: $border-radius
+
+          &:last-of-type
+            border-bottom-right-radius: $border-radius
+
+      th, td
+        color: $block-txt-color

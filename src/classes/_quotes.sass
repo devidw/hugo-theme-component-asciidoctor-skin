@@ -1,0 +1,21 @@
+.quoteblock, .verseblock
+  .attribution
+    color: base-lower-shade($body-bg-color, $body-txt-color, 15)
+
+    cite
+      color: base-lower-shade($body-bg-color, $body-txt-color, 50)
+
+.quoteblock
+  blockquote
+    color: $color-brand
+
+    &::before
+      font-family: $h-font-family
+      color: transparentize($color-brand, 0.3)
+
+    p
+      color: $color-brand
+
+.verseblock
+  pre
+    color: $color-brand

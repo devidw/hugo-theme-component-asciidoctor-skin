@@ -1,0 +1,18 @@
+=focus
+  &:focus, &:focus-visible
+    outline-style: solid
+    outline-color: $a-color-link
+    outline-width: 0.2rem
+    outline-offset: 0.25rem
+
+=border-radius($top-left: $border-radius, $top-right: $border-radius, $bottom-left: $border-radius, $bottom-right: $border-radius)
+  border-top-left-radius: $top-left
+  border-top-right-radius: $top-right
+  border-bottom-left-radius: $bottom-left
+  border-bottom-right-radius: $bottom-right
+
+=box-shadow
+  box-shadow: 0 0px 20px 5px #0004
+
+=border($width: $border-width, $style: solid, $color: $border-color)
+  border: $width $style $color
