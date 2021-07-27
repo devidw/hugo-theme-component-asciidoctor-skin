@@ -1,0 +1,45 @@
+$admonitions: (
+  'tip',
+  'note',
+  'important',
+  'caution',
+  'warning',
+);
+$colors: (
+  brand: #ff6961,
+  tip: #43b929,
+  note: #2d7dd2,
+  important: #e40046,
+  caution: #9f00c5,
+  warning: #f70,
+  body-bg: #161618,
+  body-txt: #eee,
+  block-bg: #222,
+  block-txt: #d8d2cd,
+  a-link: #45b0e6,
+  a-visited: adjust-hue(#45b0e6, 100deg),
+  border: transparentize(#8c7d70, .5),
+  // box-shadow: #0004,
+)
+!default;
+// dark base color overrides
+$colors-scheme-dark: ()
+!default;
+$colors-dark: map-merge($colors, $colors-scheme-dark) !default;
+// light base color overrides
+$colors-scheme-light: (
+  // brand: #FF6F69,
+  body-bg: #eee,
+  body-txt: #111,
+  block-bg: #ddd,
+  block-txt: #222,
+)
+!default;
+$colors-light: map-merge($colors, $colors-scheme-light) !default;
+$body-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$h-font-family: $body-font-family !default;
+$code-font-family: 'Fira Code', 'Fira Mono', monospace !default;
+$body-font-size: 20px !default;
+$body-line-height: 1.5 !default;
+$border-width: 0.1rem !default;
+$border-radius: 4px !default;

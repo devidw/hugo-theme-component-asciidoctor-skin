@@ -1,7 +1,7 @@
 =focus
   &:focus, &:focus-visible
     outline-style: solid
-    outline-color: $a-color-link
+    outline-color: color(a-link)
     outline-width: 0.2rem
     outline-offset: 0.25rem
 
@@ -12,7 +12,7 @@
   border-bottom-right-radius: $bottom-right
 
 =box-shadow
-  box-shadow: 0 0px 20px 5px #0004
+  box-shadow: 0 0px 20px 5px color(body-txt-transparentize-9)
 
-=border($width: $border-width, $style: solid, $color: $border-color)
+=border($width: $border-width, $style: solid, $color: color(border))
   border: $width $style $color

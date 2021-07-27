@@ -7,8 +7,9 @@
     text-transform: uppercase
 
     @if $i == 1
-      color: $h-txt-color
+      color: color(brand)
       font-weight: $wght
     @else
-      color: base-stronger-shade($body-bg-color, $h-txt-color, $i * 2)
+      // color: base-stronger-shade(color('body-bg'), color('h-txt'), $i * 2)
+      color: color(brand)
       font-weight: $wght - $i * 50

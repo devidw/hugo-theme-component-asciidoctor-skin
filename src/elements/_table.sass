@@ -1,11 +1,11 @@
 table.tableblock, th.tableblock, td.tableblock
-  border-color: $border-color
+  border-color: color('border')
   border-width: $border-width
 
 table
-  $secondary-color: base-lower-shade($block-txt-color, $block-bg-color, 5)
-  background: $block-bg-color
-  color: $block-txt-color
+  $secondary-color: base-lower-shade(color('block-txt'), color('block-bg'), 5)
+  background: color('block-bg')
+  color: color('block-txt')
   border-radius: $border-radius
 
   +box-shadow
@@ -15,7 +15,7 @@ table
 
     tr
       th
-        color: $block-txt-color
+        color: color('block-txt')
 
         &:first-of-type
           border-top-left-radius: $border-radius
@@ -37,4 +37,4 @@ table
             border-bottom-right-radius: $border-radius
 
       th, td
-        color: $block-txt-color
+        color: color('block-txt')

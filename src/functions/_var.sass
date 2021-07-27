@@ -1,0 +1,7 @@
+/// print css custom properties
+@function color($name)
+  $fallback: map-get($colors, $name)
+  @if $fallback
+    @return var(--color-#{$name}, $fallback)
+  @else
+    @return var(--color-#{$name})
