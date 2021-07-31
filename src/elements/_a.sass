@@ -8,8 +8,11 @@ a
 
   +focus
 
-  &:not([href])
-    cursor: not-allowed
+  &:not([href]), &[aria-current="location"], &[aria-current="page"]
+    // cursor: text
+    pointer-events: none
+    text-decoration: none
+    font-weight: bold
 
   $states: 'link' color('a-link'), 'visited' color('a-visited')
 

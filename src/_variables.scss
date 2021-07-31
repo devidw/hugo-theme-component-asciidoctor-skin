@@ -1,9 +1,14 @@
+$icons: (
+  not-allowed: 🚫,
+  valid: ✓,
+  invalid: ✗,
+);
 $admonitions: (
-  'tip',
-  'note',
-  'important',
-  'caution',
-  'warning',
+  tip: 💡,
+  note: 🗒,
+  important: ❗,
+  caution: ⚡,
+  warning: ⚠️,
 );
 $colors: (
   brand: #ff6961,
@@ -21,12 +26,10 @@ $colors: (
   border: transparentize(#8c7d70, .5),
   // box-shadow: #0004,
 )
-!default;
-// dark base color overrides
+!default; // dark base color overrides
 $colors-scheme-dark: ()
 !default;
-$colors-dark: map-merge($colors, $colors-scheme-dark) !default;
-// light base color overrides
+$colors-dark: map-merge($colors, $colors-scheme-dark) !default; // light base color overrides
 $colors-scheme-light: (
   // brand: #FF6F69,
   body-bg: #eee,
@@ -41,5 +44,6 @@ $h-font-family: $body-font-family !default;
 $code-font-family: 'Fira Code', 'Fira Mono', monospace !default;
 $body-font-size: 20px !default;
 $body-line-height: 1.5 !default;
-$border-width: 0.1rem !default;
+$border-width: 4px !default;
 $border-radius: 4px !default;
+$transition-duration: 0.35s !default;

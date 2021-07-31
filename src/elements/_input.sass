@@ -1,0 +1,34 @@
+input, textarea
+  width: 100%
+  padding: ($body-font-size / 2) ($body-font-size / 2)
+  border: $border-width solid color(border)
+  background: transparent
+  color: color("body-txt")
+
+  &:valid
+    border-color: color(tip)
+
+    &::selection
+      background: color(tip)
+
+  &:invalid
+    border-color: color(warning)
+
+    &::selection
+      background: color(warning)
+
+input
+  // &:focus
+  &:valid, &:invalid
+    padding-left: 1.75rem
+    background: transparent
+    color: color("body-txt")
+    background-size: 48px
+    background-position: 0.5rem 6px
+    background-repeat: no-repeat
+
+  &:valid
+    +icon-bg-url(valid, tip)
+
+  &:invalid
+    +icon-bg-url(invalid, warning)

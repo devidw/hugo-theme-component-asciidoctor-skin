@@ -5,16 +5,19 @@
 
   +box-shadow
 
-  @each $admonition in $admonitions
-    &.#{$admonition}
-      $color: color($admonition)
+  @each $text, $icon in $admonitions
+    &.#{$text}
+      $color: color($text)
 
       border-left-color: $color
-
-      background: linear-gradient(135deg, color(#{$admonition}-transparentize-9) 0%, color(#{$admonition}-transparentize-7) 100%)
+      background: linear-gradient(135deg, color(#{$text}-transparentize-9) 0%, color(#{$text}-transparentize-7) 100%)
 
       .title
         color: $color
+
+      td.icon i[class*='icon-']
+        &::before
+          content: "#{$icon}"
 
   tr
     display: flex
@@ -26,9 +29,15 @@
       padding-left: 1.125em
       text-align: left
 
-      // font-style: italic
+      i[class*='icon-']
+        font-size: 1em
+        font-style: normal
+
+        &::after
+          content: attr(title)
+          margin-left: .35em
 
     td.content
       padding-top: 0
       border: none
-      color: color('body-txt') !important
+      color: color("body-txt") !important
