@@ -1,7 +1,7 @@
 =focus
   &:focus, &:focus-visible
     outline-style: solid
-    outline-color: color('a-link-transparentize-1')
+    outline-color: color("a-link-transparentize-1")
     outline-width: 0.2rem
     outline-offset: 0.25rem
 
@@ -12,7 +12,10 @@
   border-bottom-right-radius: $bottom-right
 
 =box-shadow
-  box-shadow: 0 0px 10px 3px color(body-txt-transparentize-8)
+  @media(prefers-color-scheme: dark)
+    box-shadow: unset
+  @media(prefers-color-scheme: light)
+    box-shadow: 0 0px 10px 3px color(body-txt-transparentize-8)
 
 =border($width: $border-width, $style: solid, $color: color(border))
   border: $width $style $color
@@ -20,4 +23,6 @@
 =icon-bg-url($icon, $color)
   $i: map-get($icons, $icon)
   $c: map-get($colors, $color)
+  $c: str-replace("" + $c, "#", "%23")
+
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewport="0 0 48 48" style="fill:#{$c};font-size:24px"><text y="50%">#{$i}</text></svg>')
