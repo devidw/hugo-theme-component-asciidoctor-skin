@@ -16,8 +16,16 @@
         color: $color
 
       td.icon i[class*='icon-']
+        font-size: 1em
+        font-style: normal
+
         &::before
           content: "#{$icon}"
+
+        &::after
+          content: attr(title)
+          margin-left: 0.35em
+          color: $color
 
   tr
     display: flex
@@ -28,14 +36,6 @@
       padding-bottom: 0
       padding-left: 1.125em
       text-align: left
-
-      i[class*='icon-']
-        font-size: 1em
-        font-style: normal
-
-        &::after
-          content: attr(title)
-          margin-left: .35em
 
     td.content
       padding-top: 0

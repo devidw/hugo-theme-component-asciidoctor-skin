@@ -1,3 +1,22 @@
-= Asciidoctor Skin Darksome
+= Hugo Theme Component: Asciidoctor Skin
 
-:author: David Wolf <david@wolf.gdn>
+Adds a fully styled Asciidoctor Stylesheet to your Hugo site so all your pages will look amazing.
+
+== Setup
+=== 1. Clone this theme component to your `/themes` directory
+[source, sh]
+----
+git submodule add https://github.com/hugoseotheme/hugo-theme-component-asciidoctor-skin
+----
+
+=== 2. Add this theme component to your list of themes inside your `/config.(yaml|toml|json)` file
+[source, toml]
+----
+theme = ["…", "hugo-theme-component-asciidoctor-skin", "…"]
+----
+
+=== 3. Import the styles into your themes main stylesheet
+[source, sass]
+----
+@import asciidoctor-skin/import
+----
