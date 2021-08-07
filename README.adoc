@@ -23,7 +23,7 @@ Designed to be included as a theme component to your Hugo site, so code id separ
 git submodule add https://github.com/hugoseotheme/hugo-theme-component-asciidoctor-skin
 ----
 
-==== 2. Add this theme component to your list of themes inside your `/config.(yaml|toml|json)` file
+==== 2. Add this theme component to your list of themes inside your `config.(yaml|toml|json)` file
 [source, toml]
 ----
 theme = ["…", "hugo-theme-component-asciidoctor-skin", "…"]
@@ -32,7 +32,7 @@ theme = ["…", "hugo-theme-component-asciidoctor-skin", "…"]
 ==== 3. Import the styles into your themes main stylesheet
 The styles are located inside the `/assets/asciidoctor-skin` directory in the theme component and are available inside that directory in your project root and other themes and theme components at the same place because of the way Hugo merges all its sources into one site when building.
 
-So when you are writing your styles inside a subfolder of `/assets` like `/assets/sass`, `/assets/scss`, `/assets/css` or `/assets/styles` you can import like so:
+So when you are writing your styles inside a subfolder of `assets` like `/assets/sass`, `/assets/scss`, `/assets/css` or `/assets/styles` you can import like so:
 
 .In SASS
 [source, sass]
@@ -55,7 +55,7 @@ So when you are writing your styles inside a subfolder of `/assets` like `/asset
 
 == Personalisation
 === with `SASS|SCSS`
-Have a look into `/_variables.scss` to get an idea of what you can change, also check out the files inside `/mixins` and `/functions` to see the available mixins and functions you can use.
+Have a look into `_variables.scss` to get an idea of what you can change, also check out the files inside `mixins` and `functions` to see the available mixins and functions you can use.
 
 === with `CSS`
 Once you added the stylesheet to your document you can see a list of all CSS custom properties in your browsers dev tools when you inspect the `html` node.
