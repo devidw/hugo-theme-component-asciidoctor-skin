@@ -2,36 +2,49 @@ $icons: (
   not-allowed: 🚫,
   valid: ✓,
   invalid: ✗,
-);
+)
+!default;
 $admonitions: (
   tip: 💡,
   note: 🗒,
   important: ❗,
   caution: ⚡,
   warning: ⚠️,
-);
-$colors: (
-  brand: #ff6961,
-  tip: #43b929,
-  note: #2d7dd2,
-  important: #e40046,
-  caution: #9f00c5,
-  warning: #f70,
-  body-bg: #161618,
-  body-txt: #eee,
-  block-bg: #222,
-  block-txt: #d8d2cd,
-  a-link: #45b0e6,
-  a-visited: adjust-hue(#45b0e6, 100deg),
-  border: transparentize(#8c7d70, .5),
-  // box-shadow: #0004,
 )
-!default; // dark base color overrides
-$colors-scheme-dark: ()
 !default;
+$color-brand: #ff6961 !default;
+$color-tip: #43b929 !default;
+$color-note: #2d7dd2 !default;
+$color-important: #e40046 !default;
+$color-caution: #9f00c5 !default;
+$color-warning: #f70 !default;
+$color-body-bg: #161618 !default;
+$color-body-txt: #eee !default;
+$color-block-bg: #222 !default;
+$color-block-txt: #d8d2cd !default;
+$color-a-link: #45b0e6 !default;
+$color-a-visited: adjust-hue(#45b0e6, 100deg) !default;
+$color-border: transparentize(#8c7d70, .5) !default;
+$colors: (
+  brand: $color-brand,
+  tip: $color-tip,
+  note: $color-note,
+  important: $color-important,
+  caution: $color-caution,
+  warning: $color-warning,
+  body-bg: $color-body-bg,
+  body-txt: $color-body-txt,
+  block-bg: $color-block-bg,
+  block-txt: $color-block-txt,
+  a-link: $color-a-link,
+  a-visited: $color-a-visited,
+  border: $color-border,
+)
+!default;
+$colors-scheme-dark: ()
+!default; // dark base color overrides
 $colors-dark: map-merge($colors, $colors-scheme-dark) !default; // light base color overrides
 $colors-scheme-light: (
-  // brand: #FF6F69,
   body-bg: #eee,
   body-txt: #111,
   block-bg: #ddd,
