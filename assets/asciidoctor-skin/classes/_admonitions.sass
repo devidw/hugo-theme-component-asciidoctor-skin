@@ -5,6 +5,10 @@
 
   +box-shadow
 
+  table
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
   @each $text, $icon in $admonitions
     &.#{$text}
       $color: color($text)
@@ -12,20 +16,27 @@
       border-left-color: $color
       background: linear-gradient(135deg, color(#{$text}-transparentize-9) 0%, color(#{$text}-transparentize-7) 100%)
 
+      *::selection
+        background: $color
+
       .title
         color: $color
 
       td.icon i[class*='icon-']
         font-size: 1em
         font-style: normal
+        text-shadow: unset
 
         &::before
           content: "#{$icon}"
+          color: transparent
+          text-shadow: 0 0 $color
 
         &::after
           content: attr(title)
           margin-left: 0.35em
           color: $color
+          font-weight: bold
 
   tr
     display: flex
