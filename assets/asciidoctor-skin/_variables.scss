@@ -22,6 +22,8 @@ $color-body-bg: #161618 !default;
 $color-body-txt: #eee !default;
 $color-block-bg: #222 !default;
 $color-block-txt: #d8d2cd !default;
+$color-kbd-bg: #0000 !default;
+$color-kbd-txt: #d8d2cd !default;
 $color-a-link: #45b0e6 !default;
 $color-a-visited: adjust-hue(#45b0e6, 100deg) !default;
 $color-border: transparentize(#8c7d70, .5) !default;
@@ -36,6 +38,8 @@ $colors: (
   body-txt: $color-body-txt,
   block-bg: $color-block-bg,
   block-txt: $color-block-txt,
+  kbd-bg: $color-kbd-bg,
+  kbd-txt: $color-kbd-txt,
   a-link: $color-a-link,
   a-visited: $color-a-visited,
   border: $color-border,
@@ -54,7 +58,7 @@ $colors-scheme-light: (
 $colors-light: map-merge($colors, $colors-scheme-light) !default;
 $body-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 $h-font-family: $body-font-family !default;
-$code-font-family: 'Fira Code', 'Fira Mono', monospace !default;
+$font-family-mono: 'Fira Code', 'Fira Mono', monospace !default;
 $body-font-size: 20px !default;
 $body-line-height: 1.5 !default;
 $border-width: 4px !default;
