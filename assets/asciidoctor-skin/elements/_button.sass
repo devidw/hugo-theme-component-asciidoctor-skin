@@ -1,4 +1,5 @@
-button
+button,
+input[type="submit"],
   padding: ($body-font-size / 6) ($body-font-size / 2)
   background: color("block-txt")
   color: color("block-bg")
@@ -20,7 +21,8 @@ button
     background: color("block-txt-transparentize-3")
     color: color("block-bg-transparentize-2")
 
-button[disabled]
+button[disabled],
+input[type="submit"][disabled],
   cursor: not-allowed
 
   &:before
