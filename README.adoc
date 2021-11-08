@@ -20,7 +20,7 @@ Designed to be included as a theme component to your Hugo site, so code id separ
 ==== 1. Clone this theme component to your `/themes` directory
 [source]
 ----
-git submodule add https://github.com/hugoseotheme/hugo-theme-component-asciidoctor-skin ./themes/hugo-theme-component-asciidoctor-skin
+git submodule add https://github.com/devidw/hugo-theme-component-asciidoctor-skin ./themes/hugo-theme-component-asciidoctor-skin
 ----
 
 ==== 2. Add this theme component to your list of themes inside your `config.(yaml|toml|json)` file
