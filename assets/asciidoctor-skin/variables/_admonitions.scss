@@ -1,0 +1,14 @@
+// admonition icons
+$admonition-tip: 💡 !default;
+$admonition-note: 🗒 !default;
+$admonition-important: ❗ !default;
+$admonition-caution: ⚡ !default;
+$admonition-warning: ⚠️ !default;
+
+$admonitions: (
+  tip: $admonition-tip,
+  note: $admonition-note,
+  important: $admonition-important,
+  caution: $admonition-caution,
+  warning: $admonition-warning,
+);

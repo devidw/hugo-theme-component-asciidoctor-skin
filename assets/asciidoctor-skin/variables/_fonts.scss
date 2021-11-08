@@ -1,0 +1,11 @@
+// fonts
+$font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol" !default;
+$font-family-heading: $font-family-body !default;
+$font-family-monospace: "Fira Code", "Fira Mono", monospace !default;
+$font-families: (
+  body: $font-family-body,
+  heading: $font-family-heading,
+  monospace: $font-family-monospace,
+);

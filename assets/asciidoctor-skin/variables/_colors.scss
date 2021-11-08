@@ -1,17 +1,4 @@
-$icons: (
-  not-allowed: 🚫,
-  valid: ✓,
-  invalid: ✗,
-) !default;
-
-$admonitions: (
-  tip: 💡,
-  note: 🗒,
-  important: ❗,
-  caution: ⚡,
-  warning: ⚠️,
-) !default;
-
+// colors
 $color-brand: #ff6961 !default;
 $color-tip: #43b929 !default;
 $color-note: #2d7dd2 !default;
@@ -27,6 +14,7 @@ $color-kbd-txt: #d8d2cd !default;
 $color-a-link: #45b0e6 !default;
 $color-a-visited: adjust-hue(#45b0e6, 100deg) !default;
 $color-border: transparentize(#8c7d70, 0.5) !default;
+
 $colors: (
   brand: $color-brand,
   tip: $color-tip,
@@ -43,37 +31,24 @@ $colors: (
   a-link: $color-a-link,
   a-visited: $color-a-visited,
   border: $color-border,
-) !default;
+);
 
-$colors-scheme-dark: () !default;
-$colors-dark: map-merge($colors, $colors-scheme-dark) !default;
+// dark color scheme
+$colors-scheme-dark: ();
+$colors-dark: map-merge($colors, $colors-scheme-dark);
 
+// light color scheme
 $colors-scheme-light: (
   body-bg: #eee,
   body-txt: #111,
   block-bg: #ddd,
   block-txt: #222,
-) !default;
-$colors-light: map-merge($colors, $colors-scheme-light) !default;
+);
+$colors-light: map-merge($colors, $colors-scheme-light);
 
+// color schemes
 $colors-schemes: (dark: $colors-dark, light: $colors-light);
 
+// default color scheme, has to be one of the keys of $colors-schemes
 $colors-scheme-default-key: "dark" !default;
 $colors-scheme-default: map-get($colors-schemes, $colors-scheme-default-key);
-
-$font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol" !default;
-$font-family-heading: $font-family-body !default;
-$font-family-monospace: "Fira Code", "Fira Mono", monospace !default;
-$font-families: (
-  body: $font-family-body,
-  heading: $font-family-heading,
-  monospace: $font-family-monospace,
-);
-
-$body-font-size: 20px !default;
-$body-line-height: 1.5 !default;
-$border-width: 4px !default;
-$border-radius: 4px !default;
-$transition-duration: 0.35s !default;

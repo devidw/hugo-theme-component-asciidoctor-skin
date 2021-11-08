@@ -1,5 +1,8 @@
 =color-variations($key, $value)
+  // @debug $key, $value
+
   --color-#{$key}: #{$value}
+  
   @for $i from 1 through 9
     --color-#{$key}-transparentize-#{$i}: #{transparentize($value, $i / 10)}
 
