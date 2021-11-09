@@ -54,7 +54,7 @@ So when you are writing your styles inside a subfolder of `assets` like `/assets
 
 
 == Personalisation
-=== with `SASS|SCSS`
+=== with `SASS` or `SCSS`
 Have a look into `_variables.scss` to get an idea of what you can change, also check out the files inside `mixins` and `functions` to see the available mixins and functions you can use.
 
 === with `CSS`
