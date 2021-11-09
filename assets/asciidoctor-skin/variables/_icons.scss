@@ -1,10 +1,12 @@
 // icons
-$icon-not-allowed: 🚫 !default;
 $icon-valid: ✓ !default;
 $icon-invalid: ✗ !default;
+$icon-target-blank: ➹ !default;
+$icon-not-allowed: 🚫 !default;
 
 $icons: (
-  not-allowed: $icon-not-allowed,
   valid: $icon-valid,
   invalid: $icon-invalid,
-) !default;
+  target-blank: $icon-target-blank,
+  not-allowed: $icon-not-allowed,
+);
