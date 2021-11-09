@@ -9,7 +9,6 @@ a
   +focus
 
   &:not([href]), &[aria-current="location"], &[aria-current="page"]
-    // cursor: text
     pointer-events: none
     text-decoration: none
     font-weight: bold
@@ -31,7 +30,6 @@ a
 
       &:focus, &:focus-visible
         color: $color
-        // outline-color: transparentize($color, 0.5)
         outline-color: $color
         text-decoration: none
 
@@ -40,4 +38,4 @@ a
       display: inline-block
       margin-left: .2rem
       text-decoration: none
-      content: '➹'
+      content: '#{$icon-target-blank}'
