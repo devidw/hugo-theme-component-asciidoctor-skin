@@ -5,16 +5,29 @@
     cite
       color: color('body-txt-transparentize-6')
 
-.quoteblock
-  blockquote
+.quoteblock blockquote,
+blockquote,
+  color: color('brand')
+  border-left: none
+  font-size: 1.15rem
+  font-style: italic
+  line-height: 1.75
+  word-spacing: .1em
+  text-align: justify
+
+  &::before
+    content: open-quote
+    float: left
+    font-size: 2.75em
+    font-weight: 700
+    line-height: .6em
+    margin-left: -.6em
+    text-shadow: 0 1px 2px rgba(0,0,0,.1)
+    font-family: $font-family-heading
+    color: color('brand-transparentize-3')
+
+  p
     color: color('brand')
-
-    &::before
-      font-family: $font-family-heading
-      color: color('brand-transparentize-3')
-
-    p
-      color: color('brand')
 
 .verseblock
   pre
