@@ -2,7 +2,7 @@
 
 Adds a fully styled Asciidoctor Stylesheet to your Hugo site so all your pages will look amazing.
 
-Designed to be included as a theme component to your Hugo site, so code id separated nicely and you don't have to worry so much about problems related to updates.
+Designed to be included as a theme component to your Hugo site, so code is separated nicely and you don't have to worry so much about update related problems.
 
 
 == Features
@@ -46,12 +46,13 @@ So when you are writing your styles inside a subfolder of `assets` like `/assets
 @import '../asciidoctor-skin/import';
 ----
 
+////
 .In CSS
 [source, css]
 ----
 @import url('/asciidoctor-skin/import.min.css');
 ----
-
+////
 
 == Personalisation
 === with `SASS` or `SCSS`
