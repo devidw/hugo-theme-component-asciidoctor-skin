@@ -6,27 +6,44 @@ Designed to be included as a theme component to your Hugo site, so code is separ
 
 
 == Features
-* Dark + Light-Mode
+* Dark and Light styles
 * Customisable in many ways
 * Great predesign for
-** typography
-** content elments
-** forms
-** and a lot more
+** Typography
+** Content elments
+** Forms
+** & more
 
 
 == Installation
 
-==== 1. Clone this theme component to your `/themes` directory
-[source]
+==== 1. Clone this theme component to your project's `themes` directory
+[source,cmd]
 ----
 git submodule add https://github.com/devidw/hugo-theme-component-asciidoctor-skin ./themes/hugo-theme-component-asciidoctor-skin
 ----
 
-==== 2. Add this theme component to your list of themes inside your `config.(yaml|toml|json)` file
-[source, toml]
+==== 2. Add this theme component to your list of themes inside your project's `config` file (either `.yaml`, `.toml` or `.json`)
+
+.`config.yaml`
+[source,yaml]
+----
+theme: 
+  - "…"
+  - "hugo-theme-component-asciidoctor-skin"
+  - "…"
+----
+
+.`config.toml`
+[source,toml]
 ----
 theme = ["…", "hugo-theme-component-asciidoctor-skin", "…"]
+----
+
+.`config.json`
+[source,json]
+----
+"theme": ["…", "hugo-theme-component-asciidoctor-skin", "…"]
 ----
 
 ==== 3. Import the styles into your themes main stylesheet
@@ -35,13 +52,13 @@ The styles are located inside the `/assets/asciidoctor-skin` directory in the th
 So when you are writing your styles inside a subfolder of `assets` like `/assets/sass`, `/assets/scss`, `/assets/css` or `/assets/styles` you can import like so:
 
 .In SASS
-[source, sass]
+[source,sass]
 ----
 @import ../asciidoctor-skin/import
 ----
 
 .In SCSS
-[source, scss]
+[source,scss]
 ----
 @import '../asciidoctor-skin/import';
 ----
@@ -55,8 +72,8 @@ So when you are writing your styles inside a subfolder of `assets` like `/assets
 ////
 
 == Personalisation
-=== with `SASS` or `SCSS`
+=== With `SASS` or `SCSS`
 Have a look into `_variables.scss` to get an idea of what you can change, also check out the files inside `mixins` and `functions` to see the available mixins and functions you can use.
 
-=== with `CSS`
+=== With `CSS`
 Once you added the stylesheet to your document you can see a list of all CSS custom properties in your browsers dev tools when you inspect the `html` node.
