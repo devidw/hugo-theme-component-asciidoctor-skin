@@ -39,6 +39,7 @@ $colors-dark: map-merge($colors, $colors-scheme-dark);
 
 // light color scheme
 $colors-scheme-light: (
+  brand: #b24944,
   body-bg: #eee,
   body-txt: #111,
   block-bg: #ddd,
