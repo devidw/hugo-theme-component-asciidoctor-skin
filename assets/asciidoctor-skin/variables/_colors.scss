@@ -13,7 +13,9 @@ $color-kbd-bg: #0000 !default;
 $color-kbd-txt: #d8d2cd !default;
 $color-a-link: #45b0e6 !default;
 $color-a-visited: adjust-hue(#45b0e6, 100deg) !default;
-$color-border: transparentize(#8c7d70, 0.5) !default;
+// $color-border: transparentize(#8c7d70, 0.5) !default;
+$color-border: rgb(75, 75, 75) !default;
+// $color-border: red !default;
 
 $colors: (
   brand: $color-brand,
@@ -48,7 +50,10 @@ $colors-scheme-light: (
 $colors-light: map-merge($colors, $colors-scheme-light);
 
 // color schemes
-$colors-schemes: (dark: $colors-dark, light: $colors-light);
+$colors-schemes: (
+  dark: $colors-dark,
+  light: $colors-light,
+);
 
 // default color scheme, has to be one of the keys of $colors-schemes
 $colors-scheme-default-key: "dark" !default;

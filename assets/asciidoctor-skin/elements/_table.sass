@@ -1,16 +1,25 @@
+// $border-radius: 1rem
+
+table,
+td,
 table.tableblock,
 td.tableblock,
 table.grid-all,
 table.grid-all td.tableblock
+  // border-width: $border-width
+  // border-style: solid
   border-color: color('border')
   // border-width: $border-width / 2
+
+  // +border()
 
 table
   $secondary-color: base-lower-shade(color('block-txt'), color('block-bg'), 5)
   background: color('block-bg')
   color: color('block-txt')
-  border-radius: $border-radius
   border-collapse: collapse
+  // border-radius: $border-radius
+  border-width: 1px
 
   +box-shadow
 
@@ -32,11 +41,12 @@ table
       th
         color: color('block-txt')
 
-        // &:first-of-type
-        //   border-top-left-radius: $border-radius
-        //
-        // &:last-of-type
-        //   border-top-right-radius: $border-radius
+  // tr
+  //   &:first-of-type th:first-child
+  //     border-top-left-radius: $border-radius
+
+  //   &:last-of-type th:first-child
+  //     border-bottom-left-radius: $border-radius
 
   tbody
     tr
@@ -51,5 +61,7 @@ table
       //     &:last-of-type
       //       border-bottom-right-radius: $border-radius
 
-      th, td
+      td
         color: color('block-txt')
+        border-width: 1px
+        border-style: solid
