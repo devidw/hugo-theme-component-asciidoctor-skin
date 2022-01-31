@@ -2,8 +2,10 @@
 .sidebarblock,
 .literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class=highlight], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint,
 div.highlight
-  background: color('block-bg')
-  color: color('block-txt')
+  // background: color('block-bg')
+  // color: color('block-txt')
+  // background: $color-block-bg
+  // color: $color-block-txt
   border-color: color('border')
   border-style: solid
   border-width: $border-width
@@ -11,11 +13,14 @@ div.highlight
 
 // markdown
 div.highlight
-  padding: 1em
   margin-bottom: 1.25em
   +border-radius
 
   pre
-    background-color: transparent !important
+    padding: 1em
     font-size: .90625em
     outline: none
+
+// AsciiDoctor code block
+pre[class="highlight"],
+  background: transparent !important
