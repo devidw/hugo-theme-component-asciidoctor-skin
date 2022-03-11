@@ -46,54 +46,52 @@ theme = ["…", "hugo-theme-component-asciidoctor-skin", "…"]
 "theme": ["…", "hugo-theme-component-asciidoctor-skin", "…"]
 ----
 
-=== 3. Load the partial
+=== 3. Import the stylesheet
 
-Include the partial  `vendor/devidw/asciidoctor-skin/include.html` in the `<head></head>` section of your theme's template files.
+The styles are located inside the `/assets/asciidoctor-skin` directory in the theme component and are available inside that directory in your project root and other themes and theme components at the same place because of the way Hugo merges all its sources into one site when building.
 
-[source,html]
+So when you are writing your styles inside a subfolder of `assets` like `/assets/sass`, `/assets/scss`, `/assets/css` or `/assets/styles` you can import like so:
+
+.In SASS
+[source,sass]
 ----
-<!-- ... -->
-
-<head>
-  <!-- ... -->
-
-  {{ if templates.Exists "partials/vendor/devidw/asciidoctor-skin/include.html" }}
-    {{ partial "vendor/devidw/asciidoctor-skin/include.html" . }}
-  {{ end }}
-
-  <!-- ... -->
-</head>
-
-<!-- ... -->
+@import ../asciidoctor-skin/import
 ----
 
-// The styles are located inside the `/assets/asciidoctor-skin` directory in the theme component and are available inside that directory in your project root and other themes and theme components at the same place because of the way Hugo merges all its sources into one site when building.
+.In SCSS
+[source,scss]
+----
+@import '../asciidoctor-skin/import';
+----
 
-// So when you are writing your styles inside a subfolder of `assets` like `/assets/sass`, `/assets/scss`, `/assets/css` or `/assets/styles` you can import like so:
-
-// .In SASS
-// [source,sass]
-// ----
-// @import ../asciidoctor-skin/import
-// ----
-
-// .In SCSS
-// [source,scss]
-// ----
-// @import '../asciidoctor-skin/import';
-// ----
-
-////
 .In CSS
 [source, css]
 ----
 @import url('/asciidoctor-skin/import.min.css');
 ----
-////
 
-// == Personalisation
-// === With `SASS` or `SCSS`
-// Have a look into `_variables.scss` to get an idea of what you can change, also check out the files inside `mixins` and `functions` to see the available mixins and functions you can use.
+== Personalisation
+=== With `SASS` or `SCSS`
+Have a look into `_variables.scss` to get an idea of what you can change, also check out the files inside `mixins` and `functions` to see the available mixins and functions you can use.
 
-// === With `CSS`
-// Once you added the stylesheet to your document you can see a list of all CSS custom properties in your browsers dev tools when you inspect the `html` node.
+=== With `CSS`
+Once you added the stylesheet to your document you can see a list of all CSS custom properties in your browsers dev tools when you inspect the `html` node.
+
+// Include the partial  `vendor/devidw/asciidoctor-skin/include.html` in the `<head></head>` section of your theme's template files.
+
+// [source,html]
+// ----
+// <!-- ... -->
+
+// <head>
+//   <!-- ... -->
+
+//   {{ if templates.Exists "partials/vendor/devidw/asciidoctor-skin/include.html" }}
+//     {{ partial "vendor/devidw/asciidoctor-skin/include.html" . }}
+//   {{ end }}
+
+//   <!-- ... -->
+// </head>
+
+// <!-- ... -->
+// ----
